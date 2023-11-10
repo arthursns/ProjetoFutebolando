@@ -28,8 +28,8 @@ class FormularioLogin(FlaskForm):
     submit = SubmitField('Entrar')
 
 class FormularioCadastroUser(FlaskForm):
-    nome = StringField('Nome da Criança', [data_required(), length(min=6, max=120), FormTexto("Nome Inválido")])
+    nome = StringField('Nome do Usuário', [data_required(), length(min=6, max=120), FormTexto("Nome Inválido")])
     cpf = StringField('CPF', [data_required(), Cpf("O CPF é inválido!")])
     email = StringField('Email')
-    password = PasswordField('Password')
-    submit = SubmitField('Entrar')
+    password = PasswordField('Senha')
+    submit = SubmitField('Cadastrar')
