@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro Usuário</title>
+</head>
+
+<body>
+  <div id="cadUser">
+    <form action="signup" method="post">
+      {{ cadUser.csrf_token() }}
+      <section id="cadUser-section">
+        <fieldset class="formulario-field">
+          {{ cadUser.nome.label }}
+          {{ cadUser.nome }}
+        </fieldset>
+        <fieldset class="formulario-field">
+          {{ cadUser.cpf.label }}
+          {{ cadUser.cpf }}
+        </fieldset>
+        <fieldset class="formulario-field">
+          {{ cadUser.email.label }}
+          {{ cadUser.email }}
+        </fieldset>
+        <fieldset class="formulario-field">
+          {{ cadUser.password.label }}
+          {{ cadUser.password }}
+        </fieldset>
+        <div class="btn-group">
+          {{ cadUser.submit }}
+        </div>
+      </section>
+  </div>
+</body>
+
+</html>

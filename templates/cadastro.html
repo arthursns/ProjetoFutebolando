@@ -1,0 +1,122 @@
+{% extends "template.html" %}
+{% block content %}
+<section class="formulario-wrapper">
+  <form action="{{ url_for('cadastrar') }}" class="formulario" enctype="multipart/form-data" method="POST" data-form>
+    {{ form.csrf_token() }}
+    <ul class="steps">
+      <div class="progress" data-progress></div>
+      <li class="step check"><i class="fa-solid fa-circle-info"></i>Informações</li>
+      <li class="step"><i class="fa-solid fa-location-dot"></i>Endereço</li>
+      <li class="step"><i class="fa-solid fa-camera-retro"></i>Imagem</li>
+    </ul>
+    <div class="form-group meio">
+      <fieldset class="formulario-field">
+        {{ form.nome.label }}
+        {{ form.nome }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <div class="colspan2">
+        <fieldset class="formulario-field">
+          {{ form.cpf.label }}
+          {{ form.cpf }}
+          <span class="error-message" data-error></span>
+        </fieldset>
+        <fieldset class="formulario-field">
+          {{ form.data_nascimento.label }}
+          {{ form.data_nascimento }}
+          <span class="error-message" data-error></span>
+        </fieldset>
+      </div>
+      <fieldset class="formulario-field">
+        {{ form.nome_responsavel.label }}
+        {{ form.nome_responsavel }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.telefone.label }}
+        {{ form.telefone }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.email.label }}
+        {{ form.email }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.observacoes.label }}
+        {{ form.observacoes }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <div class="btn-group">
+        <button class="avancar">avançar</button>
+      </div>
+    </div>
+
+    <div class="form-group fim">
+      <fieldset class="formulario-field">
+        {{ form.cep.label }}
+        {{ form.cep }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+
+      <fieldset class="formulario-field">
+        {{ form.bairro.label }}
+        {{ form.bairro }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.rua.label }}
+        {{ form.rua }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.cidade.label }}
+        {{ form.cidade }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.complemento.label }}
+        {{ form.complemento }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.numero_endereco.label }}
+        {{ form.numero_endereco }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <div class="btn-group">
+        <button class="voltar">voltar</button>
+        <button class="avancar">avançar</button>
+      </div>
+    </div>
+
+    <div class="form-group fim">
+      <fieldset class="formulario-field">
+        {{ form.direito_imagem.label }}
+        {{ form.direito_imagem}}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <fieldset class="formulario-field">
+        {{ form.permissoes.label }}
+        {{ form.permissoes }}
+        <span class="error-message" data-error></span>
+      </fieldset>
+      <figure class="form-image" data-error>
+        <img class="img-fluid" src="{{ url_for('imagem', nome_arquivo='foto_padrao.jpg') }}">
+        <figcaption>
+          <label class="fileContainer">
+            Mudar Capa
+            <input type="file" name="file" accept="image/png, image/jpg, image/jpeg">
+          </label>
+        </figcaption>
+      </figure>
+      <div class="btn-group">
+        <button class="voltar">voltar</button>
+        {{ form.submit }}
+      </div>
+    </div>
+  </form>
+</section>
+{% endblock %}
+
+<script src="../static/scripts/modules/form-class.js"></script>

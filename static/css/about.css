@@ -1,0 +1,30 @@
+.about {
+  display: flex;
+  flex-flow: wrap column;
+  padding: 60px;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-family: "Rubik", sans-serif;
+}
+
+.about-info {
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.about-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4em;
+  width: 10em;
+}
+
+.extra-image {
+  position: absolute;
+  transform: rotate(30deg);
+  width: 200px;
+  z-index: -1;
+}

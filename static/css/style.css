@@ -1,0 +1,125 @@
+@import url("menu.css");
+@import url("banner.css");
+@import url("about.css");
+@import url("footer.css");
+@import url("alerts.css");
+@import url("forms.css");
+
+@font-face {
+  font-family: "Jersey M54";
+  src: url("../font/Jersey\ M54.ttf") format("truetype");
+}
+
+:root {
+  /*Colors*/
+  --menu-text: #ced4e5;
+  --hamburguer: black;
+  --menu-text-hover: #f8f8f8;
+  --menu-btn: #ced4e5;
+  --slogan: white;
+  --gradient: linear-gradient(90deg,rgba(255, 0, 0, 0.806),rgba(15, 1, 210, 0.823));
+  font-size: 66.25%;
+}
+
+/* Mobile Font */
+@media (max-width: 1200px) {
+  :root {
+    font-size: 61%;
+  }
+}
+
+@media (max-width: 992px) {
+  :root {
+    font-size: 59%;
+  }
+}
+
+@media (max-width: 860px) {
+  :root {
+    font-size: 57%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 55%;
+  }
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #f6f4f8;
+}
+
+.whatsapp-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(0deg, #25d366, #64d872);
+
+  bottom: 3rem;
+  border-radius: 5rem;
+  color: #ffffff;
+  font-size: 4rem;
+  height: 7rem;
+  width: 7rem;
+  position: fixed;
+  right: 3rem;
+  transition: transform 0.3s;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+}

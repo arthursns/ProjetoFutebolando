@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script src="https://kit.fontawesome.com/c6d6aa1dd7.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Projeto Futebolando</title>
+
+  <script type="module" src="{{ url_for('static', filename='scripts/main.js') }}" defer></script>
+  <script type="module" src="{{ url_for('static', filename='scripts/modules/form-class.js') }}" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="menu-wrapper">
+      <button class="btn-hamb" data-menu="btn" aria-expanded="false" aria-controls="menu">Menu</button>
+      <a href="/" class="menu-logo"><img src="../static/image/Logo.svg" alt="Logo Futebolando"></a>
+      <ul class="menu" data-menu="list">
+        <li class="menu-item"><a href="#" class="admin-icon"><i class="fa-solid fa-user"></i></a></li>
+        <li class="menu-item dropdown" data-dropdown>
+          <a href="#" class="menu-link">
+            Sobre
+          </a>
+          <ul class="dropdown-menu">
+            <li class="menu-item"><a href="">Calendário</a></li>
+            <li class="menu-item"><a href="">História</a></li>
+            <li class="menu-item"><a href="">Galeria</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="#" class="menu-link">Títulos</a></li>
+        <li class="menu-item"><a href="#" class="menu-link">Depoimentos</a></li>
+        <li class="menu-item"><a href="#" class="menu-button">Inscreva-se</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  {% block content %}{% endblock %}
+  <div class="alert">dsa</div>
+
+
+  <footer>
+    <div>
+      <img src="{{ url_for('static', filename='image/logo-img.png') }}" class="footer-img" alt="logo projeto">
+      <p class="footer-description">dsadsa</p>
+      <ul class="social-media">
+        <li><i class="fa-brands fa-facebook-f"></i></li>
+        <li><i class="fa-brands fa-instagram"></i></li>
+        <li><i class="fa-brands fa-whatsapp"></i></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a class="whatsapp-icon" href="#" aria-label="Entre em contato via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+  <script src="https://kit.fontawesome.com/c6d6aa1dd7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

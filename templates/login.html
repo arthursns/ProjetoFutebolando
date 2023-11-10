@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <div id="login">
+    <form action="login" method="post">
+      {{ login.csrf_token() }}
+      <section id="login-section">
+        <fieldset class="formulario-field">
+          {{ login.email.label }}
+          {{ login.email }}
+        </fieldset>
+        <fieldset class="formulario-field">
+          {{ login.password.label }}
+          {{ login.password }}
+        </fieldset>
+        <div class="btn-group">
+          {{ login.submit }}
+        </div>
+      </section>
+  </div>
+</body>
+
+</html>

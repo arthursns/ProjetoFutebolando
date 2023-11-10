@@ -1,0 +1,21 @@
+{% extends "template.html" %}
+{% block content %}
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>CEP</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for aluno in alunos %}
+    <tr>
+      <td>{{ aluno.nome }}</td>
+      <td>{{ aluno.cpf }}</td>
+      <td>{{ aluno.cep }}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+{% endblock %}

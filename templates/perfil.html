@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+{% if image %}
+<img src="data:;base64,{{ image }}" alt="Image">
+{% else %}
+<img src="{{ url_for('imagem', nome_arquivo='foto_padrao.jpg') }}" alt="Image">
+{% endif %}
+
+{% endblock %}

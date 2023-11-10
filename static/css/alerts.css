@@ -1,0 +1,27 @@
+:root {
+  --alert-denied: #e86f77;
+  --alert-approve: #6fe88b;
+  --alert-denied-border: #830009;
+  --alert-approve-border: #007202;
+}
+
+.alert {
+  border-radius: 6px;
+  bottom: 10vh;
+  display: none;
+  font-size: 2rem;
+  left: 50%;
+  position: fixed;
+  transform: translateX(-50%);
+  width: 80%;
+}
+
+.alert.denied{
+  display: block;
+  background-color: var(--alert-denied);
+  border: var(--alert-denied-border) solid 1px;
+}
+
+.alert.approve{
+  background-color: var(--alert-approve);
+}
